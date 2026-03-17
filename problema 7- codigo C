@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    float nota;
+
+    printf("ingrese la nota final:\n");
+    scanf("%f", &nota);
+
+    if(nota >= 0 && nota <= 100){
+        if(nota >= 51){
+            printf("el promedio final es: %.2f APROBADO\n", nota);
+        } else {
+            printf("el promedio final es: %.2f REPROBADO\n", nota);
+        }
+    } else {
+        printf("ERROR: LAS NOTAS DEBEN SER MAYOR IGUAL A 0 Y MENOR IGUAL A 100\n");
+    }
+
+    return 0;
+}
