@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+    float horas, pago, salario, bono, total;
+
+    printf("Ingrese las horas trabajadas: ");
+    scanf("%f", &horas);
+
+    printf("Ingrese el pago por hora: ");
+    scanf("%f", &pago);
+
+    salario = horas * pago;
+
+    if(horas > 40){
+        bono = salario * 0.10;
+        total = salario + bono;
+    } else {
+        total = salario;
+    }
+
+    printf("El salario total es: %.2f\n", total);
+
+    return 0;
+}
