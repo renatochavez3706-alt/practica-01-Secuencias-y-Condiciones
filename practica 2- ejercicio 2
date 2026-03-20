@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<math.h>
+#define PI 3.1416
+int main(){
+    float R, H, V, Area_lateral, Area_total, volumen;
+    
+    printf("ingrese el radio:\n");
+    scanf("%f",&R);
+    
+    printf("ingrese la altura:\n");
+    scanf("%f",&H);
+    
+    Area_lateral=2*PI*R*H;
+    Area_total=2*PI*R*(R*H);
+    volumen=PI*R*R*H;
+    
+    printf("los resultados son:\n");
+    
+    printf("Area lateral: %.2f\n", Area_lateral);
+    printf("Area total: %.2f\n", Area_total);
+    printf("VOLUMEN: %.2f\n", volumen);
+    return 0;
+}
