@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+float examen1, examen2, examen_final, proyecto, promedio, examen1_nota, examen2_nota, examenfinal_nota, proyecto_nota;
+printf("ingrese la nota del primer examen parcial:\n");
+scanf("%f", &examen1);
+printf("ingrese la nota del segundo examen parcial:\n");
+scanf("%f", &examen2);
+printf("ingrese la nota del examen final:\n");
+scanf("%f", &examen_final);
+printf("ingrese la nota del proyecto:\n");
+scanf("%f", &proyecto);
+if(examen1>=0 && examen1<=100 && examen2>=0 && examen2<=100 && examen_final>=0 && examen_final<=100 && proyecto>=0 && proyecto <=100){
+    examen1_nota=examen1*0.25;
+    examen2_nota=examen2*0.25;
+    examenfinal_nota=examen_final*0.30;
+    proyecto_nota=proyecto*0.20;
+    promedio=examen1_nota+examen2_nota+examenfinal_nota+proyecto_nota;
+    if(promedio>=51){
+
+
+        printf("el promedio es: %.2f\n", promedio);
+        printf("APROBADO\n1");
+    }else{
+        printf("el promedio es: %.2f\n", promedio);
+        printf("REPROBADO");
+    }   printf("NOTAS:\n");
+        printf("EXAMEN PARCIAL 1: %.2f\n", promedio);
+        printf("EXMANE PARICIAL 2: %.2f\n", promedio);
+        printf("EXAMEN FINAL: %.2f\n", promedio);
+        printf("PROYECTO: %.2f\n", promedio);
+}else{
+ printf("ERROR, LAS NOTAS DEBEN SER ENTRE 0 Y 100");
+}
+return 0;
+
+}
