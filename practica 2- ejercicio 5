@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    float C, T, cuota, monto_total, interes_total;
+    int N;
+
+    printf("ingrese el capital prestado:\n");
+    scanf("%f", &C);
+
+    printf("ingrese la tasa de interes mensual (ej: 0.02 para 2%%):\n");
+    scanf("%f", &T);
+
+    printf("ingrese el numero de cuotas:\n");
+    scanf("%d", &N);
+
+   
+    float potencia = pow(1 + T, N);
+
+   
+    cuota = C * (T * potencia) / (potencia - 1);
+
+   
+    monto_total = cuota * N;
+    interes_total = monto_total - C;
+
+    printf("la cuota mensual es: %.2f\n", cuota);
+    printf("el monto total a pagar es: %.2f\n", monto_total);
+    printf("el interes total es: %.2f\n", interes_total);
+
+    return 0;
+}
