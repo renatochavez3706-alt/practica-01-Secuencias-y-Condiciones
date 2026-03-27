@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main(){
+    float kwh, tarifa, monto;
+     printf("ingrese el consumo en kWh:\n");
+    scanf("%f", &kwh);
+
+    if(kwh == 0){
+        printf("SIN CONSUMO REGISTRADO\n");
+    }else if(kwh > 0 && kwh <= 100){
+        tarifa = 0.30;
+        monto = kwh * tarifa + 8;
+        printf("categoria basica\n");
+        printf("monto a pagar: %.2f Bs\n", monto);
+
+    }else if(kwh <= 300){
+        tarifa = 0.50;
+        monto = kwh * tarifa + 8;
+        printf("categoria media\n");
+        printf("monto a pagar: %.2f Bs\n", monto);
+
+    }else if(kwh <= 600){
+        tarifa = 0.75;
+        monto = kwh * tarifa + 8;
+        printf("categoria alta\n");
+        printf("monto a pagar: %.2f Bs\n", monto);
+
+    }else{
+        tarifa = 1.10;
+        monto = kwh * tarifa + 8;
+        printf("categoria industrial\n");
+        printf("monto a pagar: %.2f Bs\n", monto);
+    }
+
+    return 0;
