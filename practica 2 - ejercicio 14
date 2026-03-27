@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main(){
+    int c_pollo, c_carne, c_queso, c_refresco, c_agua;
+    float t_pollo, t_carne, t_queso, t_refresco, t_agua;
+    float total;
+
+   
+    float p_pollo = 3.50;
+    float p_carne = 4.00;
+    float p_queso = 3.00;
+    float p_refresco = 5.00;
+    float p_agua = 3.00;
+
+    printf("cantidad de salteñas de pollo:\n");
+    scanf("%d", &c_pollo);
+
+    printf("cantidad de salteñas de carne:\n");
+    scanf("%d", &c_carne);
+
+    printf("cantidad de empanadas de queso:\n");
+    scanf("%d", &c_queso);
+
+    printf("cantidad de refrescos:\n");
+    scanf("%d", &c_refresco);
+
+    printf("cantidad de agua mineral:\n");
+    scanf("%d", &c_agua);
+
+   
+    t_pollo = c_pollo * p_pollo;
+    t_carne = c_carne * p_carne;
+    t_queso = c_queso * p_queso;
+    t_refresco = c_refresco * p_refresco;
+    t_agua = c_agua * p_agua;
+
+  
+    total = t_pollo + t_carne + t_queso + t_refresco + t_agua;
+
+    printf("\n--- FACTURA ---\n");
+    printf("salteña de pollo: %.2f Bs\n", t_pollo);
+    printf("salteña de carne: %.2f Bs\n", t_carne);
+    printf("empanada de queso: %.2f Bs\n", t_queso);
+    printf("refresco: %.2f Bs\n", t_refresco);
+    printf("agua mineral: %.2f Bs\n", t_agua);
+    printf("------------------------\n");
+    printf("TOTAL A PAGAR: %.2f Bs\n", total);
+
+    return 0;
+}
