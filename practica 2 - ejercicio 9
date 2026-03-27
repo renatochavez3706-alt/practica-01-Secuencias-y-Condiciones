@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(){
+    int minutos, dias, horas, resto;
+    printf("ingrese la cantidad de minutos:\n");
+    scanf("%d", &minutos);
+    dias = minutos / 1440;
+    resto = minutos % 1440;
+    horas = resto / 60;
+    minutos = resto % 60;
+    printf("%d dias, %d horas, %d minutos\n", dias, horas, minutos);
+
+    return 0;
+}
