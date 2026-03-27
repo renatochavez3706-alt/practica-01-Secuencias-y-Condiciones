@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+    int d1, m1, d2, m2;
+    int total1, total2, diferencia;
+    int meses, dias;
+    printf("ingrese la fecha inicial (DD MM):\n");
+    scanf("%d %d", &d1, &m1);
+
+    printf("ingrese la fecha final (DD MM):\n");
+    scanf("%d %d", &d2, &m2);
+    total1 = m1 * 30 + d1;
+    total2 = m2 * 30 + d2;
+    diferencia = total2 - total1;
+    meses = diferencia / 30;
+    dias = diferencia % 30;
+
+    printf("diferencia: %d meses, %d dias\n", meses, dias);
+
+    return 0;
+}
