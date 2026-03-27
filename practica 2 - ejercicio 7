@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    float C, T, M, G;
+    int N;
+    printf("ingrese el capital inicial:\n");
+    scanf("%f", &C);
+    printf("ingrese la tasa de interes anual (en %%):\n");
+    scanf("%f", &T);
+    printf("ingrese el numero de años:\n");
+    scanf("%d", &N);
+    float tasa_mensual = T / 12 / 100;
+    int meses = N * 12;
+    M = C * pow(1 + tasa_mensual, meses);
+    G = M - C;
+    printf("el monto acumulado es: %.2f\n", M);
+    printf("la ganancia neta es: %.2f\n", G);
+ return 0;
+}
