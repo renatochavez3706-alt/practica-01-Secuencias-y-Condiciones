@@ -1,0 +1,65 @@
+a) Algoritmo PrepararTe
+    Definir agua_hervida Como Logico
+
+    Escribir "llenar el hervidor con agua"
+    Escribir "poner a calentar el agua"
+
+    agua_hervida <- Falso
+
+    Escribir "esperar hasta que el agua hierva"
+    agua_hervida <- Verdadero
+
+    Escribir "colocar una bolsita de te en una taza"
+    Escribir "verter el agua caliente en la taza"
+    Escribir "esperar unos minutos"
+    Escribir "retirar la bolsita de te"
+    Escribir "te listo para tomar"
+
+FinAlgoritmo
+b) Algoritmo RetirarDinero
+    Definir pin, saldo, monto Como Real
+
+    Escribir "insertar tarjeta"
+    Escribir "ingresar PIN"
+    Leer pin
+
+    Escribir "ingresar monto a retirar"
+    Leer monto
+
+    Escribir "ingresar saldo disponible"
+    Leer saldo
+
+    Si monto <= saldo Entonces
+        Escribir "retirando dinero..."
+        saldo <- saldo - monto
+        Escribir "retire su dinero"
+    SiNo
+        Escribir "saldo insuficiente"
+    FinSi
+
+    Escribir "retire su tarjeta"
+
+FinAlgoritmo
+c) Algoritmo EcuacionCuadratica
+    Definir a, b, c, D, x1, x2 Como Real
+
+    Escribir "ingrese a, b, c"
+    Leer a, b, c
+
+    D <- b*b - 4*a*c
+
+    Si D > 0 Entonces
+        x1 <- (-b + rc(D)) / (2*a)
+        x2 <- (-b - rc(D)) / (2*a)
+        Escribir "dos soluciones reales:", x1, x2
+
+    SiNo
+        Si D = 0 Entonces
+            x1 <- -b / (2*a)
+            Escribir "una solucion:", x1
+        SiNo
+            Escribir "no tiene soluciones reales"
+        FinSi
+    FinSi
+
+FinAlgoritmo
