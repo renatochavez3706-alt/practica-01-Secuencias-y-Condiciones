@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    bool esPrimo = true;
+
+    cout << "Ingrese N: ";
+    cin >> N;
+
+    if (N <= 1) {
+        esPrimo = false;
+    } else {
+        for (int i = 2; i < N; i++) {
+            if (N % i == 0) {
+                esPrimo = false;
+                break;
+            }
+        }
+    }
+
+    if (esPrimo)
+        cout << "Es primo" << endl;
+    else
+        cout << "No es primo" << endl;
+
+    return 0;
+}
