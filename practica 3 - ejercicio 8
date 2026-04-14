@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int n;
+    double x, suma = 0;
+    cout << "Ingrese x: ";
+    cin >> x;
+    cout << "Ingrese n: ";
+    cin >> n;
+    long long factorial = 1;
+    for (int i = 1; i <= n; i++) {
+        factorial = factorial * i;            
+        suma = suma + pow(x, i) / factorial;   
+    }
+    cout << "La suma es: " << suma << endl;
+    return 0;
+}
