@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    int A, B;
+    cout << "Ingrese dos numeros: ";
+    cin >> a >> b;
+    A = a;
+    B = b;
+    while (b != 0) {
+        int r = a % b;
+        a = b;
+        b = r;
+    }
+    int mcd = a;
+    int mcm = (A * B) / mcd;
+    cout << "El MCM es: " << mcm << endl;
+    return 0;
+}
