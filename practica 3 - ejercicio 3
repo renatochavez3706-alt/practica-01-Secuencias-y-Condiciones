@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int N;
+    double suma = 0;
+    cout << "Ingrese N: ";
+    cin >> N;
+    for (int i = 1; i <= N; i++) {
+        suma = suma + pow(i, 2);
+    }
+    cout << "La suma de cuadrados es: " << suma << endl;
+    return 0;
+}
