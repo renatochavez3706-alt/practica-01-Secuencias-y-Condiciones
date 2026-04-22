@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main(){
+int num, digitos;
+int suma=0;
+do{
+cout<<"ingrese un numero: "<<endl;
+cin>>num;
+}while(num<=0);
+while(num>0){
+digitos=num%10;
+suma=suma+digitos;
+num=num/10;
+}
+cout<<"la suma es: "<<suma<<endl;
+return 0;
+}
