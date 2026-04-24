@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int num, digito;
+    int nuevo = 0;
+    do{
+        cout << "Ingrese un numero: ";
+        cin >> num;
+    }while(num <= 0);
+    while(num > 0){
+        digito = num % 10;
+        digito = 9 - digito;
+        nuevo = nuevo * 10 + digito;
+        num = num / 10;
+    }
+    int final = 0;
+    while(nuevo > 0){
+        digito = nuevo % 10;
+        final = final * 10 + digito;
+        nuevo = nuevo / 10;
+    }
+    cout << "Complemento a 9: " << final << endl;
+    return 0;
+}
