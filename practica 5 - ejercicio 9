@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int pin, digito;
+    int anterior = -1;
+    int cantidad = 0;
+    bool valido = true;
+
+    do{
+        cout << "Ingrese PIN: ";
+        cin >> pin;
+    }while(pin <= 0);
+
+    while(pin > 0){
+
+        digito = pin % 10;
+
+        if(digito == anterior){
+            valido = false;
+        }
+
+        anterior = digito;
+
+        cantidad++;
+
+        pin = pin / 10;
+    }
+
+    if(cantidad == 4 && valido == true){
+        cout << "PIN valido" << endl;
+    }else{
+        cout << "PIN invalido" << endl;
+    }
+
+    return 0;
+}
+`
