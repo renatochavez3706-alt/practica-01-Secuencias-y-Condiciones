@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int num, digito;
+    int total = 0;
+    int mayores5 = 0;
+    int cantidad = 0;
+
+    do{
+        cout << "Ingrese transacciones: ";
+        cin >> num;
+    }while(num <= 0);
+
+    while(num > 0){
+
+        digito = num % 10;
+
+        total = total + digito;
+
+        if(digito > 5){
+            mayores5++;
+        }
+
+        cantidad++;
+
+        num = num / 10;
+    }
+
+    cout << "Total acumulado: " << total << endl;
+    cout << "Transacciones mayores a 5: " << mayores5 << endl;
+    cout << "Cantidad de movimientos: " << cantidad << endl;
+
+    return 0;
+}
