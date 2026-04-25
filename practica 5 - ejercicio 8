@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    int num, digito;
+    int suma = 0;
+    int pares = 0;
+
+    do{
+        cout << "Ingrese codigo: ";
+        cin >> num;
+    }while(num <= 0);
+
+    while(num > 0){
+
+        digito = num % 10;
+
+        suma = suma + digito;
+
+        if(digito % 2 == 0){
+            pares++;
+        }
+
+        num = num / 10;
+    }
+
+    if(pares >= 2 && suma > 15){
+        cout << "Codigo seguro" << endl;
+    }else{
+        cout << "Codigo no seguro" << endl;
+    }
+
+    return 0;
+}
